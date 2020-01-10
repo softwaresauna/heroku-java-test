@@ -94,9 +94,8 @@ public class Main {
   }
 
   @RequestMapping("/ticks")
-  int ticks() {
-
-    return this.ticks;
+  String ticks() {
+    return "Ticks: " + this.ticks;
   }
 
   @Bean
