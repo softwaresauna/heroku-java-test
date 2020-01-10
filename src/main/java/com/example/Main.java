@@ -49,6 +49,8 @@ public class Main {
   @Autowired
   private DataSource dataSource;
 
+  private int ticks = 0;
+
   public static void main(String[] args) throws Exception {
     SpringApplication.run(Main.class, args);
   }
@@ -89,6 +91,12 @@ public class Main {
       model.put("message", e.getMessage());
       return "error";
     }
+  }
+
+  @RequestMapping("/ticks")
+  int ticks() {
+
+    return this.ticks;
   }
 
   @Bean
