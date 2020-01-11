@@ -19,4 +19,11 @@ jobs:
         java -version
         mvn -version
     - name: Maven build
-      run: mvn clean install
+      run: |
+        pwd
+        ls -lha
+        cd ..
+        pwd
+        ls -lha
+        mvn clean install
+        
