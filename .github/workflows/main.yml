@@ -20,5 +20,12 @@ jobs:
       run: |
         java -version
         mvn -version
+    - name: Cache Maven repository
+      uses: actions/cache@v1
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-maven-
     - name: Maven build
       run: mvn clean install
