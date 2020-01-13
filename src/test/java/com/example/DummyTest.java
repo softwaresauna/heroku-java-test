@@ -7,6 +7,6 @@ public class DummyTest {
 
     @Test
     public void dummy() {
-//        Assertions.fail("Oops!");
+        Assertions.fail("Oops!");
     }
 }
